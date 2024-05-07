@@ -43,9 +43,7 @@ if (p) {
 pr[z].l = op[i].l;
 strcpy(pr[z].r, op[i].r);
 z++;
-}
-}
-}
+}}}
 pr[z].l = op[n - 1].l;
 strcpy(pr[z].r, op[n - 1].r);
 z++;
@@ -66,11 +64,7 @@ if (l) {
 a = l - pr[i].r;
 printf("pos: %d", a);
 pr[i].r[a] = pr[m].l;
-}
-}
-}
-}
-}
+}}}}}
 printf("Eliminate Common Expression\n");
 for (i = 0; i < z; i++) {
 printf("%c=%s\n", pr[i].l, pr[i].r);
@@ -81,15 +75,12 @@ q = strcmp(pr[i].r, pr[j].r);
 if ((pr[i].l == pr[j].l) && !q) {
 pr[i].l = '\0';
 strcpy(pr[i].r, '\0');
-}
-}
-}
+}}}
 printf("Optimized Code\n");
 for (i = 0; i < z; i++) {
 if (pr[i].l != '\0') {
 printf("%c=%s\n", pr[i].l, pr[i].r);
-}
-}
+}}
 return 0;
 }
 ```
